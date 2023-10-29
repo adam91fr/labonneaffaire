@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Bonne Affaire</title>
+</head>
+<body>
+<!-- menu -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">La Bonne Affaire</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Accueil</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenu -->
+  <div class="container">
+  <div id="alertMsg">
+    <p>
+      {{ message }}
+    </p>
+
+  </div>
+  
+  <div id="home" class="container">
+    <app-article 
+    *ngFor="let element of liste"
+    [titreArticle]="element.titreArticle" 
+      [prixArticle]="element.prixArticle" 
+      [description]="element.description"
+      [urlImg]="element.urlImg"
+      [textAltImg]="element.textAltImg"
+      [dispo]="element.dispo"
+      (info)="onAffiche($event)"></app-article>
+
+    <!--app-article 
+      [titreArticle]=" 'Vélo' " 
+      [prixArticle]="prix1" 
+      [description]="'Un super vélo tout terrain'"
+      [urlImg]="'../assets/images/velo.jpeg'"
+      [textAltImg]=" 'un vélo' "
+      [dispo]="false"
+      (info)="onAffiche($event)"></app-article>
+    <app-article
+      [titreArticle]=" 'TV' "
+      [prixArticle]="prix2"
+      [description]="'Très bonne résolution'"
+      [urlImg]="'../assets/images/tv.jpeg'"
+      [textAltImg]=" 'Une télévision' "
+      [dispo]="false"
+      (info)="onAffiche($event)"></app-article> 
+    <app-article
+      [titreArticle]=" 'Jouet' "
+      [prixArticle]="prix3" 
+      [description]="'Neuf, jamais utilisé'"
+      [urlImg]="'../assets/images/jouet.jpeg'"
+      [textAltImg]=" 'Un jouet' "
+      [dispo]="false"
+      (info)="onAffiche($event)">
+    </app-article-->
+    <!--app-article [titreArticle]=" 'TV' " [prixArticle]="prix2" (info)="onAffiche($event)"></app-article> 
+    <app-article [titreArticle]=" 'Jouet' " [prixArticle]="prix3" (info)="onAffiche($event)"></app-article--> 
+
+  </div>
+</div>
+<!-- pied de page -->  
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; La Bonne Affaire
+      </p>
+
+    </div>
+
+
+  </footer>
+</body>
+</html>

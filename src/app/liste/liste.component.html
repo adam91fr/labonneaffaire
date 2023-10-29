@@ -1,0 +1,53 @@
+<!--p>liste works!</p-->
+
+<!-- Contenu -->
+<div class="container">
+    <div id="alertMsg">
+      <p>
+        {{ message }}
+      </p>
+  
+    </div>
+    
+    <div id="home" class="container">
+      <app-article 
+      *ngFor="let element of liste"
+        [titreArticle]="element.titreArticle" 
+        [prixArticle]="element.prixArticle" 
+        [description]="element.description"
+        [urlImg]="element.urlImg"
+        [textAltImg]="element.textAltImg"
+        [dispo]="element.dispo"
+        [idArticle]="element.id"
+        (info)="onAffiche($event)"></app-article>
+  
+      <!--app-article 
+        [titreArticle]=" 'Vélo' " 
+        [prixArticle]="prix1" 
+        [description]="'Un super vélo tout terrain'"
+        [urlImg]="'../assets/images/velo.jpeg'"
+        [textAltImg]=" 'un vélo' "
+        [dispo]="false"
+        (info)="onAffiche($event)"></app-article>
+      <app-article
+        [titreArticle]=" 'TV' "
+        [prixArticle]="prix2"
+        [description]="'Très bonne résolution'"
+        [urlImg]="'../assets/images/tv.jpeg'"
+        [textAltImg]=" 'Une télévision' "
+        [dispo]="false"
+        (info)="onAffiche($event)"></app-article> 
+      <app-article
+        [titreArticle]=" 'Jouet' "
+        [prixArticle]="prix3" 
+        [description]="'Neuf, jamais utilisé'"
+        [urlImg]="'../assets/images/jouet.jpeg'"
+        [textAltImg]=" 'Un jouet' "
+        [dispo]="false"
+        (info)="onAffiche($event)">
+      </app-article-->
+      <!--app-article [titreArticle]=" 'TV' " [prixArticle]="prix2" (info)="onAffiche($event)"></app-article> 
+      <app-article [titreArticle]=" 'Jouet' " [prixArticle]="prix3" (info)="onAffiche($event)"></app-article--> 
+  
+    </div>
+  </div>
